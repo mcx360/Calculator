@@ -1,5 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 import javax.swing.border.Border;
 public class calculator extends JFrame{
@@ -20,8 +23,7 @@ public class calculator extends JFrame{
         Font numberPadFont = new Font("Arial",Font.PLAIN,60);
         inputBox.setFont(numberPadFont);
         inputBox.setHorizontalAlignment(JLabel.CENTER);
-        
-        
+        inputBox.setEditable(false);
 
         JLabel buttonArea = new JLabel();
         buttonArea.setBounds(0,250,600,600);
@@ -35,6 +37,18 @@ public class calculator extends JFrame{
         seven.setOpaque(true);
         seven.setBackground(new Color(248,248,255));
         seven.setFont(numberPadFont);
+        seven.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("7");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"7");
+                }
+            }
+        });
         buttonArea.add(seven);
 
         JButton eight = new JButton("8");
@@ -43,6 +57,18 @@ public class calculator extends JFrame{
         eight.setOpaque(true);
         eight.setBackground(new Color(248,248,255));
         eight.setFont(numberPadFont);
+        eight.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("8");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"8");
+                }
+            }
+        });
         buttonArea.add(eight);
 
         JButton nine = new JButton("9");
@@ -51,6 +77,18 @@ public class calculator extends JFrame{
         nine.setOpaque(true);
         nine.setBackground(new Color(248,248,255));
         nine.setFont(numberPadFont);
+        nine.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("9");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"9");
+                }
+            }
+        });
         buttonArea.add(nine);
 
         JButton four = new JButton("4");
@@ -59,6 +97,18 @@ public class calculator extends JFrame{
         four.setOpaque(true);
         four.setBackground(new Color(248,248,255));
         four.setFont(numberPadFont);
+        four.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("4");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"4");
+                }
+            }
+        });
         buttonArea.add(four);
         
         JButton five = new JButton("5");
@@ -67,6 +117,18 @@ public class calculator extends JFrame{
         five.setOpaque(true);
         five.setBackground(new Color(248,248,255));
         five.setFont(numberPadFont);
+        five.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("5");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"5");
+                }
+            }
+        });
         buttonArea.add(five);
 
         JButton six = new JButton("6");
@@ -75,6 +137,18 @@ public class calculator extends JFrame{
         six.setOpaque(true);
         six.setBackground(new Color(248,248,255));
         six.setFont(numberPadFont);
+        six.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("6");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"6");
+                }
+            }
+        });
         buttonArea.add(six);
 
         JButton One = new JButton("1");
@@ -83,6 +157,18 @@ public class calculator extends JFrame{
         One.setOpaque(true);
         One.setBackground(new Color(248,248,255));
         One.setFont(numberPadFont);
+        One.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("1");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"1");
+                }
+            }
+        });
         buttonArea.add(One);
         
         JButton Two = new JButton("2");
@@ -91,6 +177,18 @@ public class calculator extends JFrame{
         Two.setOpaque(true);
         Two.setBackground(new Color(248,248,255));
         Two.setFont(numberPadFont);
+        Two.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("2");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"2");
+                }
+            }
+        });
         buttonArea.add(Two);
 
         JButton Three = new JButton("3");
@@ -99,6 +197,18 @@ public class calculator extends JFrame{
         Three.setOpaque(true);
         Three.setBackground(new Color(248,248,255));
         Three.setFont(numberPadFont);
+        Three.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("3");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"3");
+                }
+            }
+        });
         buttonArea.add(Three);
 
         JButton Zero = new JButton("0");
@@ -107,6 +217,18 @@ public class calculator extends JFrame{
         Zero.setOpaque(true);
         Zero.setBackground(new Color(248,248,255));
         Zero.setFont(numberPadFont);
+        Zero.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                //inputBox.setText("7");
+                if(inputBox.getText()==null){
+                    inputBox.setText("0");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"0");
+                }
+            }
+        });
         buttonArea.add(Zero);
 
         JButton Plus = new JButton("+");
@@ -169,6 +291,9 @@ public class calculator extends JFrame{
         this.add(textArea);
         this.add(buttonArea);
         
+
+    }
+    public void actionPerformed(ActionEvent e){
 
     }
 }
