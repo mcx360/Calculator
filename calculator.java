@@ -18,6 +18,9 @@ public class calculator extends JFrame{
         inputBox.setBounds(125, 50, 350, 150);
         textArea.add(inputBox);
         Font numberPadFont = new Font("Arial",Font.PLAIN,60);
+        inputBox.setFont(numberPadFont);
+        inputBox.setHorizontalAlignment(JLabel.CENTER);
+        
         
 
         JLabel buttonArea = new JLabel();
