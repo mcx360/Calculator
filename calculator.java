@@ -40,7 +40,6 @@ public class calculator extends JFrame{
         seven.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("7");
                 }
@@ -60,7 +59,6 @@ public class calculator extends JFrame{
         eight.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("8");
                 }
@@ -80,7 +78,6 @@ public class calculator extends JFrame{
         nine.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("9");
                 }
@@ -100,7 +97,6 @@ public class calculator extends JFrame{
         four.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("4");
                 }
@@ -120,7 +116,6 @@ public class calculator extends JFrame{
         five.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("5");
                 }
@@ -140,7 +135,6 @@ public class calculator extends JFrame{
         six.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("6");
                 }
@@ -160,7 +154,6 @@ public class calculator extends JFrame{
         One.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("1");
                 }
@@ -200,7 +193,6 @@ public class calculator extends JFrame{
         Three.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("3");
                 }
@@ -220,7 +212,6 @@ public class calculator extends JFrame{
         Zero.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //inputBox.setText("7");
                 if(inputBox.getText()==null){
                     inputBox.setText("0");
                 }
@@ -237,6 +228,17 @@ public class calculator extends JFrame{
         Plus.setOpaque(true);
         Plus.setBackground(new Color(230,230,250));
         Plus.setFont(numberPadFont);
+        Plus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(inputBox.getText()==null){
+                    inputBox.setText("+");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"+");
+                }
+            }
+        });
         buttonArea.add(Plus);
 
         JButton Minus = new JButton("-");
@@ -245,6 +247,17 @@ public class calculator extends JFrame{
         Minus.setOpaque(true);
         Minus.setBackground(new Color(230,230,250));
         Minus.setFont(numberPadFont);
+        Minus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(inputBox.getText()==null){
+                    inputBox.setText("-");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"-");
+                }
+            }
+        });
         buttonArea.add(Minus);
 
         JButton Equals = new JButton("=");
@@ -261,6 +274,17 @@ public class calculator extends JFrame{
         Divide.setOpaque(true);
         Divide.setBackground(new Color(230,230,250));
         Divide.setFont(numberPadFont);
+        Divide.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(inputBox.getText()==null){
+                    inputBox.setText("/");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"/");
+                }
+            }
+        });
         buttonArea.add(Divide);
 
         JButton Multiply = new JButton("*");
@@ -269,15 +293,32 @@ public class calculator extends JFrame{
         Multiply.setOpaque(true);
         Multiply.setBackground(new Color(230,230,250));
         Multiply.setFont(numberPadFont);
+        Multiply.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(inputBox.getText()==null){
+                    inputBox.setText("*");
+                }
+                else{
+                    inputBox.setText(inputBox.getText()+"*");
+                }
+            }
+        });
         buttonArea.add(Multiply);
 
-        JButton SquareRoot = new JButton("\u221A");
-        SquareRoot.setBounds(454,16,130,130);
-        SquareRoot.setVisible(true);
-        SquareRoot.setOpaque(true);
-        SquareRoot.setBackground(new Color(230,230,250));
-        SquareRoot.setFont(numberPadFont);
-        buttonArea.add(SquareRoot);
+        JButton Clear = new JButton("C");
+        Clear.setBounds(454,16,130,130);
+        Clear.setVisible(true);
+        Clear.setOpaque(true);
+        Clear.setBackground(new Color(230,230,250));
+        Clear.setFont(numberPadFont);
+        Clear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                inputBox.setText(null);
+            }
+        });
+        buttonArea.add(Clear);
         
 
         ImageIcon logo = new ImageIcon("LogoBlue.jpg");
