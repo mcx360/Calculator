@@ -287,11 +287,15 @@ public class calculatorGui extends JFrame{
         Equals.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
+                try{
                 String userInput = inputBox.getText();  
                 calculator expression = new calculator();
                 Double result = expression.eval(userInput);
                 String answer = Double.toString(result);
-                inputBox.setText(answer);       
+                inputBox.setText(answer); 
+                }catch(Exception invalidExpression){
+                inputBox.setText("INVALID");
+                }      
             }
         });
         buttonArea.add(Equals);

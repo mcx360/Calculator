@@ -1,7 +1,9 @@
 public class calculator {
     public static double eval(final String str) {
-        //the eval algorithm is a placeholder algorithm taken from stackoverflow as I will make
-        //this algorithm last myslef after finishing all of the gui components first 
+        /* 
+        this algorithm is from stackoverflow as the primary focus of this project was to learn java gui's
+        link to algorithm:https://stackoverflow.com/questions/3422673/how-to-evaluate-a-math-expression-given-in-string-form
+        */
         return new Object() {
             int pos = -1, ch;
             
@@ -84,6 +86,6 @@ public class calculator {
                 
                 return x;
             }
-        }.parse();
-    }
+        }.parse();  
+}
 }
