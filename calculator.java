@@ -6,6 +6,9 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.border.Border;
 public class calculator extends JFrame{
+    public int sumA;
+    public int sumB;
+    public boolean noMoreOperators;
     calculator(){
 
         JLabel textArea = new JLabel();
@@ -23,13 +26,14 @@ public class calculator extends JFrame{
         Font numberPadFont = new Font("Arial",Font.PLAIN,60);
         inputBox.setFont(numberPadFont);
         inputBox.setHorizontalAlignment(JLabel.CENTER);
-        inputBox.setEditable(false);
+        inputBox.setEditable(false);      
 
         JLabel buttonArea = new JLabel();
         buttonArea.setBounds(0,250,600,600);
         buttonArea.setVisible(true);
         buttonArea.setOpaque(true);
         buttonArea.setBackground(new Color(0,85,130));
+        
 
         JButton seven = new JButton("7");
         seven.setBounds(16,16,130,130);
@@ -295,12 +299,14 @@ public class calculator extends JFrame{
         Multiply.setFont(numberPadFont);
         Multiply.addActionListener(new ActionListener() {
             @Override
+
             public void actionPerformed(ActionEvent e){
                 if(inputBox.getText()==null){
                     inputBox.setText("*");
                 }
                 else{
                     inputBox.setText(inputBox.getText()+"*");
+                
                 }
             }
         });
@@ -332,9 +338,6 @@ public class calculator extends JFrame{
         this.add(textArea);
         this.add(buttonArea);
         
-
     }
-    public void actionPerformed(ActionEvent e){
 
-    }
 }
